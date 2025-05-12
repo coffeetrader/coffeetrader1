@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./com/style.css" />
+    <link rel="shortcut icon" href="/com/img/logo.png" content="CoffeeTrader1">
+    <title>咖啡骑士官方网站</title>
+</head>
+
+<body style="height:100%; width:100%; position:relative;">
+
+
+    <div class="containerAbout">
+        <div class="navbar">
+            <img src="img/logo.png" class="logo" />
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="download.html">DOWNLOAD</a></li>
+                    <li><a href="bbs.html">BBS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+            <img src="img/menu.png" class="menu-icon" />
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1>咖啡骑士交易系统</h1>
+                <p>
+                    CoffeeTrader1 ：诚邀非对赌投资人加入, coffeetrader1@hotmail.com。
+                </p>
+                <p>
+                    CoffeeTrader1 ：意在打造一个：AI辅助量化，一套代码，高频交易全球所有 证券，期货，期权，外汇，数字货币等市场的金融终端。
+                </p>
+                <button type="submit" onclick="window.open('./img/logo.png')">Download</button>
+            </div>
+            <div class="col">
+                <div class="cards-container">
+                    <div class="cards-row">
+                        <div class="card1 card">
+                            <h5>AI编辑策略</h5>
+                            <p> </p>
+                            <p>用最新的AI : ChatGpt4 帮助客户生成、进化自己的交易策略</p>
+                        </div>
+                        <div class="card2 card">
+                            <h5>交易全球市场</h5>
+                            <p> </p>
+                            <p>意在打造一个交易全球所有金融市场的AI辅助量化终端</p>
+                        </div>
+                    </div>
+                    <div class="cards-row">
+                        <div class="card3 card">
+                            <h5>全球统一交易接口</h5>
+                            <p> </p>
+                            <p>一套代码, 两种接口(C++、python)交易全球所有金融市场</p>
+                        </div>
+                        <div class="card4 card">
+                            <h5>极速体验</h5>
+                            <p> </p>
+                            <p>全部C++实现, 高效稳定,带人工智能的Python统一接口</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <video id="videos"
+        style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; z-index:-10; " autoplay loop
+        muted>
+        <source src="" , type="video/mp4">
+
+    </video>
+
+    <script type="text/javascript">
+
+        var num = 0
+        console.log("num     00   : " + num)
+
+        var vList = [
+            'https://prod-streaming-video-msn-com.akamaized.net/35bb53a7-7ee4-4d1d-82dd-48e921e22d8b/92a0ea3b-44ed-495f-9a9d-6e8bda0ba1a3.mp4',
+            'https://prod-streaming-video-msn-com.akamaized.net/eeefcaed-5378-48a9-98d2-7db1d2b4f800/7f54a26d-4954-40c8-ab16-a3175b71603f.mp4',
+            'https://prod-streaming-video-msn-com.akamaized.net/131cf351-ec2c-4ade-96f1-387a2d3f8802/3fc3410c-db3a-45fb-bad3-b5fd8bbb21c6.mp4',
+            'https://prod-streaming-video-msn-com.akamaized.net/346ec1aa-79a1-4da4-83c6-83474aabf815/cec6a12c-9775-4327-8ca3-28c6df4f8c74.mp4',
+            'https://prod-streaming-video-msn-com.akamaized.net/ba83060f-19ec-45e8-919e-1f3f9bce7bc3/259b6592-7ef3-4b4e-ac7c-bb2abff6873b.mp4',
+            'https://prod-streaming-video-msn-com.akamaized.net/2787cb8a-1de3-455d-82db-1b2ebfc6a2ba/53af17b5-5d5d-4a5d-bdb5-7fe03aaaeb79.mp4',
+
+        ]
+
+
+        var caution = false
+        function setCookie(name, value, expires, path, domain, secure)
+        {
+            var curCookie = name + "=" + escape(value) +
+                ((expires) ? "; expires=" + expires.toGMTString() : "") +
+                ((path) ? "; path=" + path : "") +
+                ((domain) ? "; domain=" + domain : "") +
+                ((secure) ? "; secure" : "")
+            if (!caution || (name + "=" + escape(value)).length <= 4000)
+                document.cookie = curCookie
+            else
+                if (confirm("Cookie exceeds 4KB and will be cut!"))
+                    document.cookie = curCookie
+        }
+        function getCookie(name)
+        {
+            var prefix = name + "="
+            var cookieStartIndex = document.cookie.indexOf(prefix)
+            if (cookieStartIndex == -1)
+                return null
+            var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+            if (cookieEndIndex == -1)
+                cookieEndIndex = document.cookie.length
+            return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+        }
+        function deleteCookie(name, path, domain)
+        {
+            if (getCookie(name))
+            {
+                document.cookie = name + "=" +
+                    ((path) ? "; path=" + path : "") +
+                    ((domain) ? "; domain=" + domain : "") +
+                    "; expires=Thu, 01-Jan-70 00:00:01 GMT"
+            }
+        }
+        function fixDate(date)
+        {
+            var base = new Date(0)
+            var skew = base.getTime()
+            if (skew > 0)
+                date.setTime(date.getTime() - skew)
+        }
+
+        var now = new Date()
+        fixDate(now)
+        now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
+        var visits = getCookie("counter")
+        if (!visits)
+        {
+            visits = 1
+        }
+        else
+        {
+            visits = parseInt(visits) + 1
+        }
+
+        setCookie("counter", visits, now)
+
+        if (num >= vList.length)
+        {
+            num = 0
+        } else
+        {
+            num = visits % vList.length
+        }
+
+
+        console.log("num          " + num + "   visits   " + visits + "   vList.length  " + vList.length + "    vlist            " + vList[num])
+
+        let dom = document.getElementById('videos')
+        dom.setAttribute("src", vList[num])
+        dom.load()
+        dom.play()
+
+        num++
+
+    </script>
+
+
+    <audio width="0" height="0" src="./img/music.mp3" id="dd" autoplay="autoplay" loop="loop" preload="auto"></audio>
+
+</body>
+
+</html>
